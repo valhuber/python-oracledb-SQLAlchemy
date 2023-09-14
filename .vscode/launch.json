@@ -20,6 +20,21 @@
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
+            "name": "6_sqlalchemy_example",
+            "type": "python",
+            "env": {
+                "PYTHONPATH": "", 
+                "PYTHONHASHSEED": "0", 
+                "APILOGICPROJECT_DEBUG": "False"},
+            "request": "launch",
+            "program": "6_sqlalchemy_example.py",
+            "redirectOutput": true,
+            "justMyCode": false,
+            "args": ["--flask_host=localhost", "--port=5656", "--swagger_host=localhost", "--verbose=False"],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
             "name": "oracle test",
             "type": "python",
             "request": "launch",

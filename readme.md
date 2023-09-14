@@ -2,6 +2,8 @@ This project explores accessing oracle 19c via SQLAlchemy, using oracledb.
 
 It is based on [this article](https://medium.com/oracledevs/using-the-development-branch-of-sqlalchemy-2-0-with-python-oracledb-d6e89090899c).
 
+The article provides the [following sample code](https://github.com/cjbj/python-oracledb-demos-2022/blob/main/6_sqlalchemy_example.py).
+
 These instructions were run on an AMD-series Mac, **ONLY**.
 
 &nbsp;
@@ -91,6 +93,12 @@ Research:
 #### Thick Mode
 
 Fails on thin, thick needs some lib.
+
+&nbsp;
+
+### Run `6_sqlalchemy_example`
+
+Same failure is reported from [this sample](https://github.com/cjbj/python-oracledb-demos-2022/blob/main/6_sqlalchemy_example.py)
 
 &nbsp;
 
