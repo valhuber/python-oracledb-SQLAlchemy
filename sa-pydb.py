@@ -11,7 +11,7 @@ from sqlalchemy import create_engine
 from sqlalchemy import text
 
 # Database Credentials
-username = os.environ.get("scott")
+username = os.environ.get("SYS")
 password = os.environ.get("tiger")
 
 # For PYTHON_CONNECTSTRING, I use Easy Connect strings like "localhost/orclpdb1".  These two lines

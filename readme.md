@@ -36,4 +36,23 @@ For amd architectures:
 docker run --name oracle-19c -p 1521:1521 -e ORACLE_SID=ORCL -e ORACLE_PWD=tiger -v /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/oracle/oracle-19c/oradata/:/opt/oracle/oradata doctorkirk/oracle-19c 
 ```
 
+&nbsp;
+
+## Use sqlplus
+
+In Docker desktop, click the image and open terminal, and enter `sqlplus`.
+Fails to login with user (scott, SYS, SYSTEM) and pwd `tiger`:
+
+```log
+ORA-12547: TNS:lost contact
+```
+
+&nbsp;
+
+## Run `sa-db`
+
+Use Run Config sa-db.
+
+Fails "orclpdb1 is not registered..."
+
 
