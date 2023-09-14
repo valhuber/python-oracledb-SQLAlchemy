@@ -14,7 +14,9 @@ def print_meta(meta):
         for each_column in each_table.columns:
             print(f'\t{each_column.name}')
 
-db_url = "sqlite:////Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/ApiLogicProject/database/db.sqlite"
+db_url = "oracle+oracledb://system:tiger@localhost:1521/?service_name=ORCL"
+
+# db_url = "sqlite:////Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/ApiLogicProject/database/db.sqlite"
 # db_url = "sqlite:////Users/val/dev/servers/ApiLogicProject/database/nw-gold.sqlite"
 
 e = sqlalchemy.create_engine(db_url)

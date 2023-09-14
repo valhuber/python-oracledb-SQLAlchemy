@@ -12,12 +12,13 @@ from sqlalchemy import text
 
 # Database Credentials
 username = "system"
-password = "oracle"
+password = "tiger"
 
 # For PYTHON_CONNECTSTRING, I use Easy Connect strings like "localhost/orclpdb1".  These two lines
 # let me access the components individually
 cp = oracledb.ConnectParams()
-cp.parse_connect_string("localhost/XE")
+# cp.parse_connect_string("localhost/XE")
+cp.parse_connect_string("localhost/ORCL")
 # cp.parse_connect_string(os.environ.get("localhost/orclpdb1"))
 
 # To use python-oracledb Thick mode on macOS (Intel x86).
@@ -35,6 +36,8 @@ thick_mode = None
 # must configure the Instant Client directory by setting LD_LIBRARY_PATH or
 # running ldconfig before starting Python.
 #thick_mode = {}
+
+connect_string = f'oracle+oracledb://{username}:{password}@{cp.host}:{cp.port}/?service_name={cp.service_name}'
 
 engine = create_engine(
     f'oracle+oracledb://{username}:{password}@{cp.host}:{cp.port}/?service_name={cp.service_name}',

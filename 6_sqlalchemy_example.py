@@ -13,8 +13,8 @@ example_patch = True
 
 if example_patch:
     un = 'system'
-    pw = 'oracle'
-    dsn = 'localhost/XE'
+    pw = 'tiger'
+    dsn = 'localhost/ORCL'
 else:
     un = os.environ.get('PYTHON_USERNAME')
     pw = os.environ.get('PYTHON_PASSWORD')

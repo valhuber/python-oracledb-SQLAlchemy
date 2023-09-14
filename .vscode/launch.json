@@ -35,10 +35,10 @@
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
-            "name": "oracle test",
+            "name": "db_debug",
             "type": "python",
             "request": "launch",
-            "program": "oracle_test.py",
+            "program": "db_debug.py",
             "redirectOutput": true,
             "env": {
                 "PYTHONPATH": "", 

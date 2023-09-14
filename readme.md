@@ -58,11 +58,23 @@ service seems to be XE.
 
 select * from all_users;
 
+select USERNAME from all_users;
+
 alter session set current_schema = HR;
 
 SELECT table_name FROM all_tables WHERE owner = 'HR';
 
--- determone service
+SELECT * FROM all_tables WHERE table_name = 'USERS';
+
+SELECT * FROM all_tables WHERE table_name = 'EMPLOYEES';
+
+-- don't -- jillions of rows SELECT * FROM all_tables WHERE owner = 'SYS';
+
+-- SQL> @?/demo/schema/human_resources/hr_main.sql
+
+-- args: 1 = tiger, 2 = users, 3 = temp, 4 = tiger, 5 = $ORACLE_HOME/demo/schema/log/
+
+-- determine service
 
 -- not: select sys_context('userenv','sessionid') Session_ID from dual;
 
@@ -105,12 +117,16 @@ Same failure is reported from [this sample](https://github.com/cjbj/python-oracl
 
 &nbsp;
 
+### Load sample database HR
+
+Use [this documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/comsc/installing-sample-schemas.html#GUID-CB945E4C-D08A-4B26-A12D-3D6D688467EA).
+
 ## Appendix (old failed attempts - ignore for now)
 
 ### Image fails M-series
 
 
-For an M-series mac:
+For an M-series mac (caution - does not work):
 
 ```bash
 docker run --name oracle-19c --platform linux/amd64 -p 1521:1521 -e ORACLE_SID=ORCL -e ORACLE_PWD=tiger -v ~/dev/ApiLogicServer/ApiLogicServer-dev/oracle/oracle-19c/oradata/:/opt/oracle/oradata doctorkirk/oracle-19c 
@@ -120,6 +136,10 @@ For amd architectures:
 ```bash
 docker run --name oracle-19c -p 1521:1521 -e ORACLE_SID=ORCL -e ORACLE_PWD=tiger -v /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/oracle/oracle-19c/oradata/:/opt/oracle/oradata doctorkirk/oracle-19c 
 ```
+
+> Note: Start takes several minutes (at least initially) once docker is downloaded/started.
+
+Use Docker desktop > terminal to login to sqlplus with system/tiger
 
 #### Fails - no services
 
