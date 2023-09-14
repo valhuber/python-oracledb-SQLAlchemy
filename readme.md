@@ -81,7 +81,7 @@ Use Run Config sa-db.
 
 #### Thin Mode fails
 
-If you eanble line 28, thin mode fails with:
+If you enable line 28, thin mode fails with:
 
 ![thin mode fails](images/thin-mode-fails.png)
 
@@ -99,11 +99,11 @@ Fails on thin, thick needs some lib.
 
 ### Run `6_sqlalchemy_example`
 
-Same failure is reported from [this sample](https://github.com/cjbj/python-oracledb-demos-2022/blob/main/6_sqlalchemy_example.py)
+Same failure is reported from [this sample](https://github.com/cjbj/python-oracledb-demos-2022/blob/main/6_sqlalchemy_example.py).
 
 &nbsp;
 
-## Appendix (ignore for now)
+## Appendix (old failed attempts - ignore for now)
 
 ### Image fails M-series
 
