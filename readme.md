@@ -18,6 +18,18 @@ venv\Scripts\activate                      # mac/linux: source venv/bin/activate
 python -m pip install -r requirements.txt  # accept "new Virtual environment"
 ```
 
+Version information from `pip freeze`:
+
+```log
+cffi==1.15.1
+cryptography==41.0.3
+greenlet==2.0.2
+oracledb==1.4.1
+pycparser==2.21
+SQLAlchemy==2.0.15
+typing_extensions==4.7.1
+```
+
 &nbsp;
 
 ### Start Oracle
@@ -70,6 +82,13 @@ Use Run Config sa-db.
 If you eanble line 28, thin mode fails with:
 
 ![thin mode fails](images/thin-mode-fails.png)
+
+Research:
+
+* [python-oracledb](https://github.com/oracle/python-oracledb/discussions/162)
+
+#### Thick Mode
+
 Fails on thin, thick needs some lib.
 
 &nbsp;
