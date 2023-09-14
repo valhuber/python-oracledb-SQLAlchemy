@@ -11,20 +11,22 @@ from sqlalchemy import create_engine
 from sqlalchemy import text
 
 # Database Credentials
-username = os.environ.get("SYS")
-password = os.environ.get("tiger")
+username = "system"
+password = "oracle"
 
 # For PYTHON_CONNECTSTRING, I use Easy Connect strings like "localhost/orclpdb1".  These two lines
 # let me access the components individually
 cp = oracledb.ConnectParams()
-cp.parse_connect_string("localhost/ORCL")
+cp.parse_connect_string("localhost/XE")
 # cp.parse_connect_string(os.environ.get("localhost/orclpdb1"))
 
 # For the default, python-oracledb Thin mode that doesn't use Oracle Instant Client
-thick_mode = None
+# thick_mode = None
 
 # To use python-oracledb Thick mode on macOS (Intel x86).
-#thick_mode = {"lib_dir": os.environ.get("HOME")+"/Downloads/instantclient_19_8"}
+thick_mode = {"lib_dir": os.environ.get("HOME")+"/Downloads/instantclient_19_8"}
+# fails: oracledb.exceptions.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(/Users/val/Downloads/instantclient_19_8/libclntsh.dylib, 0x0001): tried: '/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file), '/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file)". See https://python-oracledb.readthedocs.io/en/latest/user_guide/initialization.html for help
+
 
 # To use python-oracledb Thick mode on Windows
 #thick_mode = {"lib_dir": r"C:\oracle\instantclient_19_15"}
@@ -42,3 +44,5 @@ with engine.connect() as connection:
     print(connection.scalar(text("""SELECT UNIQUE CLIENT_DRIVER
                                     FROM V$SESSION_CONNECT_INFO
                                     WHERE SID = SYS_CONTEXT('USERENV', 'SID')""")))
+
+# fails: connections to this database server version are not supported by python-oracledb in thin mode
