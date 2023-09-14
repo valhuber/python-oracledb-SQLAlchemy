@@ -17,7 +17,7 @@ password = os.environ.get("tiger")
 # For PYTHON_CONNECTSTRING, I use Easy Connect strings like "localhost/orclpdb1".  These two lines
 # let me access the components individually
 cp = oracledb.ConnectParams()
-cp.parse_connect_string("localhost/orclpdb1")
+cp.parse_connect_string("localhost/ORCL")
 # cp.parse_connect_string(os.environ.get("localhost/orclpdb1"))
 
 # For the default, python-oracledb Thin mode that doesn't use Oracle Instant Client
