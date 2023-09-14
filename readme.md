@@ -88,6 +88,7 @@ If you eanble line 28, thin mode fails with:
 Research:
 
 * [python-oracledb](https://github.com/oracle/python-oracledb/discussions/162)
+    * Version 1.3.2 (worked for one thread participant) fails in the same manner
 * [bug report](https://github.com/oracle/python-oracledb/issues/230)
 
 #### Thick Mode
