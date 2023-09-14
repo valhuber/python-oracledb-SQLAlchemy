@@ -90,6 +90,8 @@ Research:
 * [python-oracledb](https://github.com/oracle/python-oracledb/discussions/162)
     * Version 1.3.2 (worked for one thread participant) fails in the same manner
 * [bug report](https://github.com/oracle/python-oracledb/issues/230)
+* [thin mode claims support for Oracle Database 19](https://oracle.github.io/python-oracledb/#:~:text=Thin%20mode%3A%20Connects%20to%20Oracle,both%20older%20and%20newer%20databases)
+    * *Thin mode: Connects to Oracle Database 12, 18, 19, 21 and 23.*
 
 #### Thick Mode
 
