@@ -6,6 +6,8 @@ These instructions were run on an AMD-series Mac, **ONLY**.
 
 &nbsp;
 
+## Install and test
+
 ### Setup venv
 
 Setup your venv...
@@ -25,7 +27,9 @@ Use `oracleinanutshell/oracle-xe-11g`:
 docker run -d --rm -p 1521:1521 --name=Oracle-11g --platform linux/amd64 -e ORACLE_SID=ORCL -e ORACLE_ALLOW_REMOTE=true oracleinanutshell/oracle-xe-11g
 ```
 
-and, for sql commands:
+&nbsp;
+
+### SQL Commands
 
 ```bash
 docker run --rm --name=sqlplus --platform linux/amd64 --interactive guywithnose/sqlplus sqlplus system/oracle@//10.0.0.234:1521
@@ -35,9 +39,25 @@ user/pwd = system/oracle
 
 service seems to be XE.
 
+```sql
+-- list schemas
+
+select * from all_users;
+
+alter session set current_schema = HR;
+
+SELECT table_name FROM all_tables WHERE owner = 'HR';
+
+-- determone service
+
+-- not: select sys_context('userenv','sessionid') Session_ID from dual;
+
+select value from v$parameter where name like '%service_name%';
+```
+
 &nbsp;
 
-## Run `sa-db`
+### Run `sa-db`
 
 Use Run Config sa-db.
 
