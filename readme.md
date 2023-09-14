@@ -29,7 +29,7 @@ docker run -d --rm -p 1521:1521 --name=Oracle-11g --platform linux/amd64 -e ORAC
 
 &nbsp;
 
-### SQL Commands
+### SQL Command Line
 
 ```bash
 docker run --rm --name=sqlplus --platform linux/amd64 --interactive guywithnose/sqlplus sqlplus system/oracle@//10.0.0.234:1521
@@ -61,11 +61,20 @@ select value from v$parameter where name like '%service_name%';
 
 Use Run Config sa-db.
 
+#### Failures not reported
+
+![missing utils.pyx](images/missing%20utils.pyx.png)
+
+#### Thin Mode fails
+
+If you eanble line 28, thin mode fails with:
+
+![thin mode fails](images/thin-mode-fails.png)
 Fails on thin, thick needs some lib.
 
 &nbsp;
 
-## Appendix
+## Appendix (ignore for now)
 
 ### Image fails M-series
 

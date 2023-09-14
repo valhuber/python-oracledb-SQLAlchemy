@@ -20,13 +20,13 @@ cp = oracledb.ConnectParams()
 cp.parse_connect_string("localhost/XE")
 # cp.parse_connect_string(os.environ.get("localhost/orclpdb1"))
 
-# For the default, python-oracledb Thin mode that doesn't use Oracle Instant Client
-# thick_mode = None
-
 # To use python-oracledb Thick mode on macOS (Intel x86).
 thick_mode = {"lib_dir": os.environ.get("HOME")+"/Downloads/instantclient_19_8"}
 # fails: oracledb.exceptions.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(/Users/val/Downloads/instantclient_19_8/libclntsh.dylib, 0x0001): tried: '/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file), '/Users/val/Downloads/instantclient_19_8/libclntsh.dylib' (no such file)". See https://python-oracledb.readthedocs.io/en/latest/user_guide/initialization.html for help
 
+# For the default, python-oracledb Thin mode that doesn't use Oracle Instant Client
+thick_mode = None
+# fails: 
 
 # To use python-oracledb Thick mode on Windows
 #thick_mode = {"lib_dir": r"C:\oracle\instantclient_19_15"}
