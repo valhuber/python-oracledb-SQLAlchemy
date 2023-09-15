@@ -121,6 +121,8 @@ Same failure is reported from [this sample](https://github.com/cjbj/python-oracl
 
 Use [this documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/comsc/installing-sample-schemas.html#GUID-CB945E4C-D08A-4B26-A12D-3D6D688467EA).
 
+Here, for example, is the [create sql](https://github.com/oracle-samples/db-sample-schemas/blob/main/human_resources/hr_create.sql).
+
 ## Appendix (old failed attempts - ignore for now)
 
 ### Image fails M-series
